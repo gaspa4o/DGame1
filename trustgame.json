@@ -1,0 +1,16 @@
+{
+  "players": 2,
+  "nodes": {
+    "N1": {"player": 1},
+    "N2": {"player": 2},
+    "Leaf_S": {"payoffs": [80, 50]},
+    "Leaf_A": {"payoffs": [20, 68]},
+    "Leaf_B": {"payoffs": [90, 70]}
+  },
+  "edges": [
+    {"source": "N1", "target": "Leaf_S", "action": "S (Не доверять)"},
+    {"source": "N1", "target": "N2", "action": "R (Довериться)"},
+    {"source": "N2", "target": "Leaf_A", "action": "A (Предать)"},
+    {"source": "N2", "target": "Leaf_B", "action": "B (Сотрудничать)"}
+  ]
+}

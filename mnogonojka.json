@@ -1,0 +1,32 @@
+{
+  "players": 2,
+  "nodes": {
+    "N1": {"player": 1},
+    "N2": {"player": 2},
+    "N3": {"player": 1},
+    "N4": {"player": 2},
+    "N5": {"player": 1},
+    "N6": {"player": 2},
+    "Leaf_1": {"payoffs": [0, -3]},
+    "Leaf_2": {"payoffs": [-1, 0]},
+    "Leaf_3": {"payoffs": [2, -1]},
+    "Leaf_4": {"payoffs": [1, 2]},
+    "Leaf_5": {"payoffs": [4, 1]},
+    "Leaf_6": {"payoffs": [3, 4]},
+    "Leaf_End": {"payoffs": [6, 3]}
+  },
+  "edges": [
+    {"source": "N1", "target": "Leaf_1", "action": "Вниз"},
+    {"source": "N1", "target": "N2", "action": "Вправо"},
+    {"source": "N2", "target": "Leaf_2", "action": "Вниз"},
+    {"source": "N2", "target": "N3", "action": "Вправо"},
+    {"source": "N3", "target": "Leaf_3", "action": "Вниз"},
+    {"source": "N3", "target": "N4", "action": "Вправо"},
+    {"source": "N4", "target": "Leaf_4", "action": "Вниз"},
+    {"source": "N4", "target": "N5", "action": "Вправо"},
+    {"source": "N5", "target": "Leaf_5", "action": "Вниз"},
+    {"source": "N5", "target": "N6", "action": "Вправо"},
+    {"source": "N6", "target": "Leaf_6", "action": "Вниз"},
+    {"source": "N6", "target": "Leaf_End", "action": "Вправо (Конец)"}
+  ]
+}

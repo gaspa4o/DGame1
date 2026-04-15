@@ -1,0 +1,17 @@
+{
+  "players": 2,
+  "nodes": {
+    "N1": {"player": 1},
+    "N2": {"player": 2},
+    "Leaf_Left": {"payoffs": [5, 0]},
+    "Leaf_Up": {"payoffs": [2, 8]},
+    "Leaf_Down": {"payoffs": [10, 10]}
+  },
+  "edges": [
+    {"source": "N1", "target": "Leaf_Left", "action": "Налево"},
+    {"source": "N1", "target": "N2", "action": "Направо"},
+    {"source": "N2", "target": "Leaf_Up", "action": "Вверх"},
+    {"source": "N2", "target": "N1", "action": "начало"}
+   
+  ]
+}

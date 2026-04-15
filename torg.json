@@ -1,0 +1,29 @@
+{
+  "players": 2,
+  "nodes": {
+    "R1_P1_Offers": {"player": 1},
+    "R1_P2_Decides": {"player": 2},
+    "R2_P2_Offers": {"player": 2},
+    "R2_P1_Decides": {"player": 1},
+    "R3_P1_Offers": {"player": 1},
+    "R3_P2_Decides": {"player": 2},
+    
+    "Leaf_Accept_R1": {"payoffs": [80, 20]},
+    "Leaf_Accept_R2": {"payoffs": [20, 60]},
+    "Leaf_Accept_R3": {"payoffs": [50, 0]},
+    "Leaf_Reject_All": {"payoffs": [0, 0]}
+  },
+  "edges": [
+    {"source": "R1_P1_Offers", "target": "R1_P2_Decides", "action": "Предложить (80/20)"},
+    {"source": "R1_P2_Decides", "target": "Leaf_Accept_R1", "action": "Принять"},
+    {"source": "R1_P2_Decides", "target": "R2_P2_Offers", "action": "Отвергнуть"},
+    
+    {"source": "R2_P2_Offers", "target": "R2_P1_Decides", "action": "Предложить (20/60)"},
+    {"source": "R2_P1_Decides", "target": "Leaf_Accept_R2", "action": "Принять"},
+    {"source": "R2_P1_Decides", "target": "R3_P1_Offers", "action": "Отвергнуть"},
+    
+    {"source": "R3_P1_Offers", "target": "R3_P2_Decides", "action": "Ультиматум (50/0)"},
+    {"source": "R3_P2_Decides", "target": "Leaf_Accept_R3", "action": "Принять"},
+    {"source": "R3_P2_Decides", "target": "Leaf_Reject_All", "action": "Отвергнуть (0/0)"}
+  ]
+}
