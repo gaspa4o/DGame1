@@ -1,0 +1,20 @@
+{
+  "players": 3,
+  "nodes": {
+    "N1": {"player": 1},
+    "N2": {"player": 2},
+    "N3": {"player": 3},
+    "Leaf_1_O": {"payoffs": [4, 0, 0]},
+    "Leaf_2_O": {"payoffs": [0, 4, 0]},
+    "Leaf_3_L": {"payoffs": [5, 5, 5]},
+    "Leaf_3_R": {"payoffs": [0, 3, 5]}
+  },
+  "edges": [
+    {"source": "N1", "target": "Leaf_1_O", "action": "O (Выйти)"},
+    {"source": "N1", "target": "N2", "action": "I (Довериться Игрок 2)"},
+    {"source": "N2", "target": "Leaf_2_O", "action": "O (Выйти)"},
+    {"source": "N2", "target": "N3", "action": "I (Довериться Игрок 3)"},
+    {"source": "N3", "target": "Leaf_3_L", "action": "L (Парето-оптимум)"},
+    {"source": "N3", "target": "Leaf_3_R", "action": "R (Случайный)"}
+  ]
+}
